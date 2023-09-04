@@ -1,6 +1,9 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import React, { useEffect, useState } from "react";
+import { auth } from "../firebase";
 
 const navigation = [
     { name: "Dashboard", href: "#", current: true },
@@ -14,6 +17,21 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+    const [authUser, setAuthUser] = useState(null);
+    useEffect(() => {
+        const listen = onAuthStateChanged(auth, (user) => {
+            if (user) setAuthUser(user);
+            else setAuthUser(null);
+        });
+        return () => listen();
+    }, []);
+
+    const userSignOut = () => {
+        signOut(auth)
+            .then(() => console.log("User signed out"))
+            .catch((err) => console.log(err));
+    };
+
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
@@ -146,7 +164,8 @@ export default function Example() {
                                                                 ? "bg-gray-100"
                                                                 : "",
                                                             "block px-4 py-2 text-sm text-gray-700"
-                                                        )}>
+                                                        )}
+                                                        onClick={userSignOut}>
                                                         Sign out
                                                     </a>
                                                 )}
