@@ -1,11 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const questRouter = require("./routes/QuestRoutes");
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
 
 //middleware
+app.use(cors({
+  origin: "http://localhost:3000", // Allow requests from this origin
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/quests", questRouter);
