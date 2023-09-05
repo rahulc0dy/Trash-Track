@@ -27,7 +27,7 @@ export default function TrashCard() {
 
     // Send data to the API using fetch or axios
     // Replace 'apiEndpoint' with your actual API endpoint
-    fetch("apiEndpoint", {
+    fetch("http://localhost:3001/api/quests", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

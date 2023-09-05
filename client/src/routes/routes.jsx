@@ -3,11 +3,13 @@ import SignUp from "../components/SignUp";
 import TrashCard from "../components/TrashCard";
 import AuthDetails from "../components/AuthDetails";
 import Home from "../components/Home";
+import View from "../components/View";
 
 import {
     createBrowserRouter,
     
 } from "react-router-dom";
+import CompletedQuests from "../components/CompletedQuests";
 
 
 export const router = createBrowserRouter([
@@ -30,6 +32,14 @@ export const router = createBrowserRouter([
     {
         path: "/authDetails",
         element: <div><AuthDetails/></div>,
+    },
+    {
+        path: "/view",
+        element: <div><View/></div>,
+    },
+    {
+        path: "/done",
+        element: <div><CompletedQuests/></div>,
     },
     
   ]);
