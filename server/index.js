@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const questRouter = require("./routes/QuestRoutes");
+require("dotenv").config();
 
 const app = express();
 
