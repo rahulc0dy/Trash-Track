@@ -10,35 +10,37 @@ const Footer = () => {
                     </div>
                     <ul>
                         <li class="my-2">
-                            <a class="hover:text-indigo-600" href="#">
+                            <a class="hover:text-indigo-600" href="/home">
                                 Home
                             </a>
                         </li>
                         <li class="my-2">
-                            <a class="hover:text-indigo-600" href="#">
-                                Services
+                            <a class="hover:text-indigo-600" href="/view">
+                                View
                             </a>
                         </li>
                         <li class="my-2">
-                            <a class="hover:text-indigo-600" href="#">
-                                Products
+                            <a class="hover:text-indigo-600" href="/done">
+                                Completed
                             </a>
                         </li>
                         <li class="my-2">
-                            <a class="hover:text-indigo-600" href="#">
-                                Pricing
+                            <a class="hover:text-indigo-600" href="/">
+                                Login
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="p-5 sm:w-7/12 border-r text-center">
                     <h3 class="font-bold text-xl text-indigo-600 mb-4">
-                        Componentity
+                        Trash Track
                     </h3>
                     <p class="text-gray-500 text-sm mb-10">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s.
+                        Trash Track is your go-to online platform for taking
+                        action against litter and waste in your neighborhood.
+                        Tired of seeing neglected garbage piles on your streets,
+                        in parks, or by the roadside? We're here to empower you
+                        to make a change!
                     </p>
                 </div>
                 <div class="p-5 sm:w-3/12">
@@ -48,12 +50,12 @@ const Footer = () => {
                     <ul>
                         <li class="my-2">
                             <a class="hover:text-indigo-600" href="#">
-                                XXX XXXX, Floor 4 San Francisco, CA
+                                Team Algo Rhythm
                             </a>
                         </li>
                         <li class="my-2">
                             <a class="hover:text-indigo-600" href="#">
-                                contact@company.com
+                                rahulchakraborty337@gmail.com
                             </a>
                         </li>
                     </ul>
