@@ -10,7 +10,10 @@ export default function SignIn() {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => console.log(userCredential))
-            .catch((err) => console.log(err));
+            .catch((err) => {
+                alert("Log In Failed! Please check credentials.");
+                console.log(err);
+            });
     };
 
     return (
